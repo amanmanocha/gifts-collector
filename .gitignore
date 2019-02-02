@@ -1,0 +1,7 @@
+*.class
+.classpath
+.idea/
+target
+.project
+.settings/
+gifts-collector.iml
