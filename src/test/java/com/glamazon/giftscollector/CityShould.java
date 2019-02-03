@@ -46,5 +46,4 @@ public class CityShould {
     assertThat(city.isWithinGrid(new Position(3, 3))).isTrue();
   }
 
-
 }
