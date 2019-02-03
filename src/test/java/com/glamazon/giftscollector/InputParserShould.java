@@ -94,7 +94,7 @@ public class InputParserShould {
   return_gifts_positions() {
     val inputParser = new InputParser(newArrayList(null, null, "2,3 4,5", null));
 
-    assertThat(inputParser.getGiftsPositions()).containsExactlyInAnyOrder(new Position(2, 3), new Position(4, 5));
+    assertThat(inputParser.getGiftsPositions()).containsExactly(new Position(2, 3), new Position(4, 5));
   }
 
   @Test public void
@@ -122,6 +122,6 @@ public class InputParserShould {
   return_directions() {
     val inputParser = new InputParser(newArrayList(null, null, null, "UDLR"));
 
-    assertThat(inputParser.getDirections()).containsExactlyInAnyOrder(U, D, L, R);
+    assertThat(inputParser.getDirections()).containsExactly(U, D, L, R);
   }
 }

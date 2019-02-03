@@ -4,11 +4,14 @@ import lombok.NonNull;
 import lombok.val;
 
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import static java.util.Arrays.stream;
 import static java.util.Collections.emptyList;
-import static java.util.stream.Collectors.toList;
+import static java.util.Collections.emptySet;
+import static java.util.stream.Collectors.toSet;
+
 public class InputParser {
   private final List<String> lines;
 
@@ -32,13 +35,13 @@ public class InputParser {
     return parsePosition(positionText);
   }
 
-  public List<Position> getGiftsPositions() {
+  public Set<Position> getGiftsPositions() {
     if (lines.get(2) == null || lines.get(2).isEmpty())
-      return emptyList();
+      return emptySet();
 
     val parts = lines.get(2).split(" ");
     return stream(parts).map(this::parsePosition)
-                        .collect(toList());
+                        .collect(toSet());
   }
 
   private Position parsePosition(@NonNull String positionText) {
