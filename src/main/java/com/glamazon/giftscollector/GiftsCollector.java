@@ -5,6 +5,7 @@ import lombok.val;
 import java.io.IOException;
 import java.nio.file.Paths;
 
+import static java.lang.String.format;
 import static java.nio.file.Files.lines;
 import static java.util.stream.Collectors.toList;
 
@@ -22,7 +23,7 @@ public class GiftsCollector {
 
     robot.collectGifts();
 
-    System.out.println(robot.getGiftsCount());
-    System.out.println(robot.getCurrentPosition());
+    System.out.println(format("%s presents", robot.getGiftsCount()));
+    System.out.println(format("Robot can be found at %s", robot.getCurrentPosition()));
   }
 }

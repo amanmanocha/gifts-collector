@@ -1,3 +1,26 @@
+# Instruction to run the application
+- Clone the repository
+```bat
+git clone https://github.com/amanmanocha/gifts-collector.git
+```
+- Move to repository directory
+```bat
+cd gifts-collector
+```
+- Compile the application
+```bat
+mvn compile
+```
+Till compilation, all steps are required to be executed once only.
+- Execute the code
+ 
+```bat
+mvn exec:java -Dexec.mainClass=com.glamazon.giftscollector.GiftsCollector
+```
+Note there is a input.config file in the repository directory. For simplicity, the application 
+accepts input from this file only and output is printed to the console only. Please make changes to 
+input.config file to change the input.
+
 # Instruction
 - Please read the problem description then create a program to solve the problem.
 - For the solution, you should use at least Java 1.8
