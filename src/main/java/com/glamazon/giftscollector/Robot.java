@@ -1,5 +1,4 @@
 package com.glamazon.giftscollector;
 
-public enum Direction {
-  U, D, L, R
+public class Robot {
 }
